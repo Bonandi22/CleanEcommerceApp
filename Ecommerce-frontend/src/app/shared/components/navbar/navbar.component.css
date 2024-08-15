@@ -1,0 +1,11 @@
+/* Adicionando transição e estilo personalizado para hover */
+.nav-link.custom-hover {
+  transition: background-color 0.3s, color 0.3s; /* Transição suave para o fundo e cor */
+}
+
+  .nav-link.custom-hover:hover {
+    color: #000000; /* Cor de texto quando passar o mouse */
+    background-color: #e2e2e2; /* Cor de fundo quando passar o mouse */
+    border-radius: 5px; /* Borda arredondada ao fundo */
+    padding: 0.5rem 1rem; /* Padding ajustado para melhor visualização */
+  }

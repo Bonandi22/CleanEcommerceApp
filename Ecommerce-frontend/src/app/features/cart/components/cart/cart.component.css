@@ -1,0 +1,21 @@
+.cart-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 16px;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.total {
+  font-size: 1.2em;
+  font-weight: bold;
+}

@@ -1,0 +1,33 @@
+<div class="cart-container">
+  <h2>Your Cart</h2>
+  <table mat-table [dataSource]="cartItems" class="mat-elevation-z8">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let item"> {{item.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="quantity">
+      <th mat-header-cell *matHeaderCellDef> Quantity </th>
+      <td mat-cell *matCellDef="let item"> {{item.quantity}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef> Price </th>
+      <td mat-cell *matCellDef="let item"> {{item.price | currency}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <td mat-cell *matCellDef="let item">
+        <button mat-button (click)="removeItem(item.id)">Remove</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="['name', 'quantity', 'price', 'actions']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['name', 'quantity', 'price', 'actions'];"></tr>
+  </table>
+
+  <div class="total">
+    <h3>Total: {{ totalAmount | currency }}</h3>
+  </div>
+</div>
